@@ -5,10 +5,10 @@
            alt="Logo" style="height:60px;">
     </a>
     <div>
-      <a class="nav-link d-inline text-white fs-5 {% if page.nav == 'home' %}fw-semibold text-decoration-underline{% endif %}"
+      <a class="nav-link d-inline text-white fs-5 {% if page.nav == 'home' %}fw-bold{% endif %}"
          href="{{ site.baseurl }}/">Начало</a>
-      <a class="nav-link d-inline text-white fs-5 {% if page.nav == 'news' %}fw-semibold text-decoration-underline{% endif %}"
-         href="{{ site.baseurl }}/news.html">Новини</a>
+      <a class="nav-link d-inline text-white fs-5 {% if page.nav == 'news' %}fw-bold{% endif %}"
+        href="{{ '/news/' | relative_url }}">Новини</a>
     </div>
   </div>
 </nav>
