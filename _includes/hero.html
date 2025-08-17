@@ -1,0 +1,10 @@
+<section class="position-relative d-flex flex-column justify-content-center text-center"
+         style="min-height:{{ include.height | default: '28vh' }};
+                background-image:url('{{ include.bg | default: '/assets/images/hero.jpg' | relative_url }}');
+                background-size:cover;background-position:center;">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(0,0,0,0.45)"></div>
+  <div class="container position-relative">
+    <h1 class="{{ include.hclass | default: 'display-4 fw-bold' }}">{{ include.title }}</h1>
+    {% if include.subtitle %}<p class="lead mb-0">{{ include.subtitle }}</p>{% endif %}
+  </div>
+</section>
