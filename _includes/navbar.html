@@ -1,0 +1,14 @@
+<nav class="navbar py-3 fixed-top" style="background-color:#5f0000;">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" href="{{ site.baseurl }}/">
+      <img src="https://web.archive.org/web/20250618061455im_/http://abvstore.eu/wp-content/uploads/2020/07/logo_responsive.png"
+           alt="Logo" style="height:60px;">
+    </a>
+    <div>
+      <a class="nav-link d-inline text-white fs-5 {% if page.nav == 'home' %}fw-semibold text-decoration-underline{% endif %}"
+         href="{{ site.baseurl }}/">Начало</a>
+      <a class="nav-link d-inline text-white fs-5 {% if page.nav == 'news' %}fw-semibold text-decoration-underline{% endif %}"
+         href="{{ site.baseurl }}/news.html">Новини</a>
+    </div>
+  </div>
+</nav>
