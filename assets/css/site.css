@@ -1,0 +1,39 @@
+/* Layout */
+body {
+  padding-top: 100px; /* space for fixed navbar */
+}
+
+/* Index feature cards */
+.feature-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* News list thumbnails: force-fit (ignore aspect ratio) */
+.news-thumb-box { --bs-aspect-ratio: 56.25%; } /* 16:9 on desktop */
+.news-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;      /* stretch to fill (no aspect ratio) */
+  display: block;
+  border-radius: inherit; /* match wrapper rounding */
+}
+
+/* Shorter thumbnail box on phones */
+@media (max-width: 767.98px) {
+  .news-thumb-box { --bs-aspect-ratio: 45%; }
+}
+
+/* Post content media */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto; /* center */
+}
+
+/* Cap very large images on wide screens */
+@media (min-width: 992px) {
+  .post-content img { max-width: 800px; }
+}
