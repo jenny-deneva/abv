@@ -4,38 +4,32 @@ title: "Новини — АБВ Книжарница"
 nav: news
 ---
 
+<!-- PAGE HEADER -->
 <section class="position-relative d-flex flex-column justify-content-center text-center"
-         style="min-height:28vh;
-                background-image:url('{{ '/assets/images/hero.jpg' | relative_url }}');
-                background-size:cover;background-position:center;">
+         style="min-height:28vh;background-image:url('{{ '/assets/images/hero.jpg' | relative_url }}');background-size:cover;background-position:center;">
   <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(0,0,0,.45)"></div>
   <div class="container position-relative">
     <h1 class="display-4 fw-bold">Новини</h1>
-    <p class="lead mb-0">Събития, нови заглавия и полезни съвети от АБВ</p>
   </div>
 </section>
 
+<!-- NEWS LIST -->
 <main class="bg-light text-dark py-5">
   <div class="container">
-    <nav aria-label="breadcrumb" class="mb-4">
-      <ol class="breadcrumb mb-0">
-        <li class="breadcrumb-item"><a href="{{ site.baseurl }}/" class="text-decoration-none">Начало</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Новини</li>
-      </ol>
-    </nav>
 
     {% for post in site.posts %}
     <article class="card rounded-4 shadow-sm mb-4">
       <div class="row g-0">
         <div class="col-md-4">
-          <img class="news-thumb" src="{{ post.image }}" alt="Снимка към новината {{ post.title }}">
+          <img class="news-thumb"
+               src="{{ post.image | default: '/assets/images/gallery/1.jpg' | relative_url }}"
+               alt="{{ post.title }}">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="badge text-bg-secondary">{{ post.category | default: "Новина" }}</span>
-              <small class="text-muted"><i class="bi bi-calendar3 me-1"></i> {{ post.date | date: "%-d %B %Y" }}</small>
-            </div>
+            <small class="text-muted d-block mb-1">
+              <i class="bi bi-calendar3 me-1"></i>{{ post.date | date: "%-d %B %Y" }}
+            </small>
             <h3 class="h5 fw-bold mb-2">
               <a class="text-decoration-none text-dark" href="{{ post.url | relative_url }}">{{ post.title }}</a>
             </h3>
