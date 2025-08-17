@@ -16,13 +16,6 @@ layout: default
 
 <main class="bg-light text-dark py-5">
   <div class="container">
-    <!-- Featured image (optional) -->
-    {% if page.image %}
-    <figure class="mb-4">
-      <img src="{{ page.image | relative_url }}" class="img-fluid rounded shadow-sm" alt="{{ page.title }}">
-    </figure>
-    {% endif %}
-
     <article class="fs-5">
       {{ content }}
     </article>
