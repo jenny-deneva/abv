@@ -23,15 +23,6 @@
     width: 100%;
   }
 
-  /* Used on news list */
-  .news-thumb {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-top-left-radius: .75rem;
-    border-bottom-left-radius: .75rem;
-  }
-
   @media (max-width: 767.98px) {
     .news-thumb {
       border-radius: .75rem .75rem 0 0;
@@ -64,19 +55,26 @@
     width: 100%;
   }
 
-  /* Used on news list */
-  .news-thumb {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-top-left-radius: .75rem;
-    border-bottom-left-radius: .75rem;
+  /* News list thumbnails: force-fit (ignore aspect ratio) */
+  .news-thumb-box {
+    --bs-aspect-ratio: 56.25%;
   }
 
+  /* 16:9 area on desktop */
+  .news-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    /* <-- stretch to fill, DOES NOT preserve aspect ratio */
+    display: block;
+    border-radius: .75rem;
+    /* unified rounding; wrapper can also have rounded */
+  }
+
+  /* Shorter box on phones */
   @media (max-width: 767.98px) {
-    .news-thumb {
-      border-radius: .75rem .75rem 0 0;
-      height: 220px;
+    .news-thumb-box {
+      --bs-aspect-ratio: 45%;
     }
   }
 
