@@ -112,13 +112,15 @@ glightbox: true
   <div class="container">
     <h2 class="fw-bold mb-4">Галерия</h2>
     <div class="row g-3">
-      <!-- Image 1..6 (same as your version) -->
       {% assign imgs = "1,2,3,4,5,6" | split: "," %}
       {% for n in imgs %}
       <div class="col-6 col-md-4">
-        <a href="https://abvstore.eu/wp-content/gallery/snimki/{{ n }}.jpg" class="glightbox" data-gallery="abv-gallery">
+        <a href="{{ '/assets/images/photos/' | append: n | append: '.jpg' | relative_url }}" 
+           class="glightbox" data-gallery="abv-gallery">
           <div class="ratio ratio-16x9 rounded shadow-sm overflow-hidden">
-            <img src="https://abvstore.eu/wp-content/gallery/snimki/{{ n }}.jpg" alt="Галерия {{ n }}" class="w-100 h-100 object-fit-cover">
+            <img src="{{ '/assets/images/photos/' | append: n | append: '.jpg' | relative_url }}"
+                 alt="Галерия {{ n }}" 
+                 class="w-100 h-100 object-fit-cover">
           </div>
         </a>
       </div>
