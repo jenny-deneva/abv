@@ -6,8 +6,6 @@ nav: news
 image: /assets/images/articles/2026/09/13/cover.png
 ---
 
-![Отново на училище!]({{ '/assets/images/articles/2026/09/13/full.jpg' | relative_url }})
-
 Уважаеми клиенти,
 
 АБВ Книжарница ще работи без прекъсване през м. септември.
@@ -15,3 +13,5 @@ image: /assets/images/articles/2026/09/13/cover.png
 Извършваме доставка на учебни помагала и учебници на всички български издателства.
 
 Заповядайте при нас!
+
+![Отново на училище!]({{ '/assets/images/articles/2026/09/13/full.jpg' | relative_url }})
